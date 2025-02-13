@@ -1,9 +1,7 @@
-import React from 'react'
+import React, { FC } from 'react'
 
-const index = () => {
+export const OfferView : FC = () => {
   return (
     <div>index</div>
   )
 }
-
-export default index

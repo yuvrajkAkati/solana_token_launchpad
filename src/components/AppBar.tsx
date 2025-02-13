@@ -14,15 +14,15 @@ export const AppBar : FC = (props) => {
     },
     {
       name : "Feature",
-      link : "#FAQ"
+      link : "#feature"
     },
     {
       name : "FAQ",
       link : "#faq"
     },
     {
-      name : "Home",
-      link : "#home"
+      name : "About us",
+      link : "#aboutUs"
     }
   ]
   return (

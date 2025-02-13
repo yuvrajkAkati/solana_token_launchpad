@@ -16,6 +16,7 @@ export const Footer : FC = () => {
     "support" , "center" , "customer" , "customer"  
   ]
   return (
+    <section id='aboutUs'>
     <div className='p-6'>
       <div className=' text-xl bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500  py-20 grid grid-cols-2 px-20 rounded-lg'>
        <div className='grid grid-cols-2'>
@@ -43,6 +44,7 @@ export const Footer : FC = () => {
        </div>
     </div>
     </div>
+    </section>
   )
 }
 

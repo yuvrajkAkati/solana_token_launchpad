@@ -21,7 +21,7 @@ const Home : NextPage = (props) => {
         <meta name="Solana token Creator" content="build and create solana token"></meta>
       </Head>
         <HomeView setOpenCreateModal={setOpenCreateModal}/>
-        {/* <ToolView
+        <ToolView
           setOpenAirdrop = {setOpenAirdrop}
           setOpenContact = {setOpenContact}
           setOpenCreateModal = {setOpenCreateModal}
@@ -33,13 +33,16 @@ const Home : NextPage = (props) => {
           setOpenCreateModal = {setOpenCreateModal}
           setOpenSendTransaction = {setOpenSendTransaction}
           setOpenTokenMetadata = {setOpenTokenMetadata}/>
-          <OfferView></OfferView>
-          <FaqView></FaqView>
+         
+          {/* <OfferView></OfferView> */}
+          {/* <FaqView></FaqView> */}
+
           {openCreateModal && (
             <div className="new_loader relative h-full bg-slate-900">
               <CreateView setOpenCreateModal={setOpenCreateModal}></CreateView>
             </div>
           )}
+           {/*
           {openTokenMetadata && (
             <div className="new_loader relative h-full bg-slate-900">
               <TokenMetadata setOpenTokenMetadata={setOpenTokenMetadata}></TokenMetadata>

@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 export const TypingEffect = ({ text, speed = 100, restartDelay = 2000 }) => {
   const [displayedText, setDisplayedText] = useState('');
   const [index, setIndex] = useState(0);
+  const [showCursor, setShowCursor] = useState(true);
 
   useEffect(() => {
     if (index < text.length) {
@@ -20,10 +21,17 @@ export const TypingEffect = ({ text, speed = 100, restartDelay = 2000 }) => {
     }
   }, [index, text, speed, restartDelay]);
 
+  useEffect(() => {
+    const cursorInterval = setInterval(() => {
+      setShowCursor((prev) => !prev);
+    }, 500);
+    return () => clearInterval(cursorInterval);
+  }, []);
+
   return (
     <div className="font-mono text-xl">
       {displayedText}
-      <span className="animate-blink">|</span>
+      {showCursor && <span className="animate-blink">|</span>}
     </div>
   );
 };

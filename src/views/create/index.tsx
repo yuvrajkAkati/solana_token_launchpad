@@ -1,9 +1,10 @@
-import React from 'react'
+import React,{FC} from 'react'
+import {useConnection,useWallet} from "@solana/wallet-adapter-react"
 
-const index = () => {
+
+export const Create = () => {
   return (
     <div>index</div>
   )
 }
 
-export default index
