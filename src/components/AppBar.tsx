@@ -1,9 +1,45 @@
-import React from 'react'
+import {FC, useState} from 'react'
+import link from "next/link"
+import NetworkSwitcher from './NetworkSwitcher' 
 
-const AppBar = () => {
+export const AppBar : FC = (props) => { 
+  const menu = [
+    {
+      name : "Home",
+      link : "#home"
+    },
+    {
+      name : "Tools",
+      link : "#tools"
+    },
+    {
+      name : "Feature",
+      link : "#FAQ"
+    },
+    {
+      name : "FAQ",
+      link : "#faq"
+    },
+    {
+      name : "Home",
+      link : "#home"
+    }
+  ]
   return (
-    <div>AppBar</div>
+    <div>
+      <header id='navbar-sticky' className='navbar bg-gradient-to-r from-indigo-700 via-purple-700 to-pink-700 rounded-b-lg text-white'>
+        <div className='container '>
+          <nav className=''>
+            <div className=''>hi</div>
+            <div className='flex'>{menu.map((items)=>{
+              return(
+                <a href={items.link} className='px-7'>{items.name}</a>
+              )
+            })}</div>
+            <div className={``}><NetworkSwitcher></NetworkSwitcher> </div>
+          </nav>
+        </div>
+      </header>
+    </div>
   )
-}
-
-export default AppBar
+} 

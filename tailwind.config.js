@@ -1,3 +1,5 @@
+const NodePolyfillPlugin = require('node-polyfill-webpack-plugin');
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -11,5 +13,5 @@ module.exports = {
   theme: {
     extend: {},
   },
-  plugins: [],
+  plugins: [ new NodePolyfillPlugin()],
 };
