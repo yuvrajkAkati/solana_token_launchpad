@@ -1,7 +1,15 @@
 import { secureHeapUsed } from "crypto";
 import React , {FC} from "react";
 import {MdGeneratingTokens ,MdArrowForward, MdDescription} from "react-icons/md"
-export const ToolView : FC = ({
+
+interface Props {
+  setOpenCreateModal: (value: boolean) => void;
+  setOpenAirdrop: (value: boolean) => void;
+  setOpenSendTransaction: (value: boolean) => void;
+  setOpenTokenMetadata: (value: boolean) => void;
+}
+
+export const ToolView : FC<Props> = ({
   setOpenAirdrop,
   setOpenCreateModal, 
   setOpenSendTransaction, 

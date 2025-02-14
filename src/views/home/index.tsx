@@ -2,7 +2,11 @@ import { FC } from "react";
 import { WalletMultiButton } from "@solana/wallet-adapter-react-ui";
 import {motion} from "framer-motion"
 
-export const HomeView : FC = ({setOpenCreateModal} ) => {
+interface Props{
+  setOpenCreateModal : (value : boolean) => void
+}
+
+export const HomeView : FC<Props> = ({setOpenCreateModal} ) => {
   return <section id="home" className="text-xl text-slate-500 h-screen ">
     <div className="pt-28 px-20">
       <div className="">

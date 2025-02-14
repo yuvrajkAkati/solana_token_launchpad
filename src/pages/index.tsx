@@ -10,7 +10,6 @@ const Home : NextPage = (props) => {
   
   const [openCreateModal , setOpenCreateModal] = useState(false)
   const [openTokenMetadata , setOpenTokenMetadata] = useState(false)
-  const [openContact , setOpenContact] = useState(false)
   const [openAirdrop , setOpenAirdrop] = useState(false)
   const [openSendTransaction , setOpenSendTransaction] = useState(false)
 
@@ -23,7 +22,6 @@ const Home : NextPage = (props) => {
         <HomeView setOpenCreateModal={setOpenCreateModal}/>
         <ToolView
           setOpenAirdrop = {setOpenAirdrop}
-          setOpenContact = {setOpenContact}
           setOpenCreateModal = {setOpenCreateModal}
           setOpenSendTransaction = {setOpenSendTransaction}
           setOpenTokenMetadata = {setOpenTokenMetadata}
@@ -31,7 +29,7 @@ const Home : NextPage = (props) => {
           {/* <OfferView></OfferView> */}
           {/* <FaqView></FaqView> */}
 
-          {openCreateModal && (
+          {!openCreateModal && (
             <div className="new_loader relative h-full bg-slate-900">
               <CreateView setOpenCreateModal={setOpenCreateModal}></CreateView>
             </div>

@@ -26,16 +26,15 @@ import { notify } from '../../utils/notifications'
 import { ClipLoader } from 'react-spinners'
 import { useNetworkConfiguration } from 'contexts/NetworkConfigurationProvider'
 
-import {AiOutlineClose} from "react-icons/ai"
 import CreateSvg from "../../components/SVG/CreateSVG"
-import { json } from 'stream/consumers'
-import { compareByDepth } from 'framer-motion/types/render/utils/compare-by-depth'
-// import { InputView } from 'views/input'
-import { MdGeneratingTokens } from 'react-icons/md'
 import { InputView } from "../index"
 // import Branding from '../../components/Branding'
 
-export const CreateView : FC = ({
+interface Props {
+  setOpenCreateModal: (value: boolean) => void;
+}
+
+export const CreateView : FC<Props> = ({
   setOpenCreateModal
 }) => {
   const {connection} = useConnection()
@@ -231,7 +230,7 @@ export const CreateView : FC = ({
   return (
     <>
 
-      {!tokenMintAddress ? (
+      {tokenMintAddress ? (
         <section className={`flex px-10 w-full h-screen justify-center bg-gradient-to-r from-indigo-700 via-purple-700 to-pink-700 transition-all duration-2000 ease-in-out transform ${
         showPage ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
       } `}>
@@ -281,11 +280,18 @@ export const CreateView : FC = ({
             </div>
           </div>
         </section>
-      ):
-      <div>
-        YOUR TOKEN HAS BEEN CREATED!
-      </div>
-      }
+      ):(
+        <div className='w-full h-full flex justify-center items-center '>
+          <section className='w-2/5 h-4/5  bg-gradient-to-r from-indigo-700 via-purple-700 to-pink-700 p-0.5 rounded-lg'>
+            <div className='grid grid-cols-2 w-full h-full bg-default-900'>
+              <div className='bg-default-900 rounded-lg h-96 w-96 flex items-center justify-center pr-10'>
+                <img src="assets/images/ai/img-9.jpg" className='w-3/5 h-3/5 rounded-lg' alt="" />
+              </div>
+              <div className='bg-default-900 rounded-lg'>asdas</div>
+            </div>
+        </section>
+        </div>
+      )}
     </>
   )
 }
