@@ -28,12 +28,6 @@ const Home : NextPage = (props) => {
           setOpenSendTransaction = {setOpenSendTransaction}
           setOpenTokenMetadata = {setOpenTokenMetadata}
         />
-        <FeatureView setOpenAirdrop = {setOpenAirdrop}
-          setOpenContact = {setOpenContact}
-          setOpenCreateModal = {setOpenCreateModal}
-          setOpenSendTransaction = {setOpenSendTransaction}
-          setOpenTokenMetadata = {setOpenTokenMetadata}/>
-         
           {/* <OfferView></OfferView> */}
           {/* <FaqView></FaqView> */}
 

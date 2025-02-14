@@ -13,14 +13,6 @@ export const AppBar : FC = (props) => {
       link : "#tools"
     },
     {
-      name : "Feature",
-      link : "#feature"
-    },
-    {
-      name : "FAQ",
-      link : "#faq"
-    },
-    {
       name : "About us",
       link : "#aboutUs"
     }
@@ -30,7 +22,7 @@ export const AppBar : FC = (props) => {
       <header id='navbar-sticky' className='navbar bg-gradient-to-r from-indigo-700 via-purple-700 to-pink-700 rounded-b-lg text-white'>
         <div className='container '>
           <nav className=''>
-            <div className=''>hi</div>
+            <div className='font-bold'>SOLANA</div>
             <div className='flex'>{menu.map((items)=>{
               return(
                 <a href={items.link} className='px-7'>{items.name}</a>

@@ -38,7 +38,7 @@ export const CreateView : FC = ({
   setOpenCreateModal
 }) => {
   const {connection} = useConnection()
-  const {publicKey , sendTransaction} = useWallet()
+  const {publicKey , sendTransaction} = useWallet();
   const {networkConfiguration} = useNetworkConfiguration()
 
 
@@ -246,7 +246,7 @@ export const CreateView : FC = ({
               <div className=' bg-gradient-to-r from-indigo-700 via-purple-700 to-pink-700 rounded-lg flex items-center justify-center w-80 h-80 p-0.5'>
                 <div className=' bg-slate-900 rounded-lg flex items-center justify-center w-full h-full '>
                   {token.image ? (
-                    <img src={token.image} alt="token" className='w-4/5 rounded-lg' />
+                    <img src={token.image} alt="token" className='w-4/5 rounded-lg h-4/5' />
                   ):(<>
                     <label htmlFor='file' className='items-center'>
                       <div className='icon'><CreateSvg/></div>
@@ -287,7 +287,11 @@ export const CreateView : FC = ({
             </div>
           </div>
         </section>
-      ):""}
+      ):
+      <div>
+        YOUR TOKEN HAS BEEN CREATED!
+      </div>
+      }
     </>
   )
 }
