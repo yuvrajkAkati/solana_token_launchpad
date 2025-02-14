@@ -30,8 +30,9 @@ import {AiOutlineClose} from "react-icons/ai"
 import CreateSvg from "../../components/SVG/CreateSVG"
 import { json } from 'stream/consumers'
 import { compareByDepth } from 'framer-motion/types/render/utils/compare-by-depth'
-import { InputView } from 'views/input'
-// import { InputView } from "../index"
+// import { InputView } from 'views/input'
+import { MdGeneratingTokens } from 'react-icons/md'
+import { InputView } from "../index"
 // import Branding from '../../components/Branding'
 
 export const CreateView : FC = ({
@@ -229,13 +230,6 @@ export const CreateView : FC = ({
 
   return (
     <>
-      {
-        isLoading && (
-          <div className=''>
-            <ClipLoader></ClipLoader>
-          </div>
-        )
-      }
 
       {!tokenMintAddress ? (
         <section className={`flex px-10 w-full h-screen justify-center bg-gradient-to-r from-indigo-700 via-purple-700 to-pink-700 transition-all duration-2000 ease-in-out transform ${
