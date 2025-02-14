@@ -27,11 +27,11 @@ export const HomeView : FC = ({setOpenCreateModal} ) => {
                   </motion.div>
                   </div>
                   </div>
-                  <div className="pt-9 pl-10">
+                  <div className="pt-9 pl-10 flex ">
                     <a onClick={()=>setOpenCreateModal(true)}>
                       <span className="text-xl border-x rounded-lg p-2 hover:text-slate-400">create</span>
                     </a>
-                      <span className="pl-2"><WalletMultiButton></WalletMultiButton></span>
+                      <div className="pl-2 pt-5"><WalletMultiButton></WalletMultiButton></div>
                   </div>
                 </div>
               </div>
